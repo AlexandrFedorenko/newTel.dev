@@ -1,0 +1,150 @@
+@import "normalize";
+@import "../fonts/font-awesome/css/font-awesome.css";
+@import "variables";
+@import "libs";
+*::-webkit-input-placeholder{
+  color: #b1b1b1;
+  opacity: 1;
+}
+
+
+*:-moz-placeholder{
+  color: #888888;
+  font-family: $fon;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+*::-moz-placeholder{
+  color: #888888;
+  font-family: $fon;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+*:-ms-input-placeholder{
+  color: #888888;
+  font-family: $fon;
+  font-size: 18px;
+  font-weight: 400;
+}
+.hidden{
+  display: none
+}
+a,button,input,textarea{
+  outline: none;
+}
+body{
+  color: $black;
+  font-family: $fon;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  background-color: #f2f2f2;
+}
+
+// titles
+.h{
+  color: $black;
+  font-family: $fon;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.h1{
+  @extend .h;
+  font-size: 63px;
+}
+.h2{
+  @extend .h;
+  font-size: 40px;
+}
+.h3{
+  @extend .h;
+  font-size: 30px;
+  font-weight: 700;
+}
+.h4{
+  @extend .h;
+  font-size: 24px;
+  font-weight: 700;
+}
+.h6{
+  @extend .h;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+//button
+
+.bt{
+  cursor: pointer;
+  width: 258px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all .3s;
+}
+.bt-blue{
+  box-shadow: 7px 12px 21px rgba(12, 13, 13, 0.17);
+  background-color:$liBlue;
+  border-radius: 40px;
+  color: white;
+  &:hover,
+  &:active,
+  &:focus{
+    background-color: $darkBlue;
+  }
+}
+.bt-white{
+  color: $gray;
+  border-radius: 40px;
+  border: 1px solid $liBlue;
+  &:hover,
+  &:active,
+  &:focus{
+    color: black;
+    border: 1px solid $darkBlue;
+  }
+}
+
+.ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p,h1,h2,h3,h4,h5{
+  margin: 0;
+}
+a,button,input,textarea{
+  outline: none;
+  text-decoration: none;
+  transition: all .3s;
+}
+.container{
+  max-width: 1365px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+//imports
+@import "elements/header";
+@import "elements/blockItems";
+@import "elements/blockComents";
+@import "elements/popups";
+
+
+
+
+@import "elements/footer";
+
+
+
