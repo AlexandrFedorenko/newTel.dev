@@ -1083,35 +1083,114 @@
     </footer>
 </div>
 
-<div id="form-popup" class="white-popup mfp-hide">
-    <form action="#" method="post" enctype="multipart/form-data" class="main-form">
+<div id="form-popup" class="white-popup mfp-hide main-form">
+
         <div class="wrap-menu-popup">
            <div class="wrap-nawvig-popup">
                <span class="title-popup">Добавить</span>
                <ul class="menu-popup ul">
                    <li class="menu-popup_item active"><a href="#">Стикеры</a></li>
                    <li class="menu-popup_item"><a href="#">Бота</a></li>
-                   <li class="menu-popup_item"><a href="#">Канал</a></li>
-                   <li class="menu-popup_item"><a href="#">Чат</a></li>
                    <li class="menu-popup_item"><a href="#">Игру</a></li>
+                   <li class="menu-popup_item"><a href="#">Чат</a></li>
+                   <li class="menu-popup_item"><a href="#">Канал</a></li>
                    <li class="menu-popup_item"><a href="#">Маски</a></li>
                </ul>
            </div>
 
 
             <div class="tab active tab1">
-                <form action="#" method="post" class="form-popup1 frm form-popup"  enctype="multipart/form-data">
-                    <input type="text" class="inp-popup" placeholder="Заголовок">
+                <form action="#" method="post" class="form-popup1 frm frm1 form-popup"  enctype="multipart/form-data">
+                    <input type="text" class="inp-popup" name="title" placeholder="Заголовок">
                     <textarea name="mess"  class="text-popup" placeholder="Описание"></textarea>
-                    <input type="text" class="inp-popup" placeholder="Оставьте свой номер телефона, контакт в телеграме или почту, для отправки запроса">
-                    <input type="url" class="inp-popup" placeholder="Ссылка">
+                    <input type="text" name="num" class="inp-popup" placeholder="Оставьте свой номер телефона, контакт в телеграме или почту, для отправки запроса">
+                    <input type="url" name="url" class="inp-popup" placeholder="Ссылка">
                     <div class="wrap-inp-files">
                         <span class="lab-file-inp">Стикеры:</span>
                         <div class="input-file-container">
-                            <input class="input-file uploadbtn" id="my-file" name="file" type="file" multiple >
+                            <input class="input-file uploadbtn uploadbtn1"  data-attr="1"   id="my-file" name="file" type="file" multiple >
                             <label tabindex="0" for="my-file" class="input-file-trigger">Загрузить изображение</label>
                         </div>
                     </div>
+                    <div class="wrap-files">
+                        <!-- Область предпросмотра -->
+                        <div class="uploaded-holder uploaded-holder1">
+                            <div class="dropped-files dropped-files1">
+                                <!-- Кнопки загрузить и удалить, а также количество файлов -->
+                                <div class="upload-button upload-button1">
+                                    <!-- Прогресс бар загрузки -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Список загруженных файлов -->
+                        <div class="file-name-holder file-name-holder1">
+                            <ul class="uploaded-files uploaded-files1">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wrap-sub-main-form">
+                        <input type="submit" class="sub-form" value="Добавить в каталог">
+                    </div>
+                </form>
+            </div>
+            <div class="tab tab2">
+                <form action="#" method="post" class="form-popup1 frm frm2 form-popup"  enctype="multipart/form-data">
+                    <input type="text" class="inp-popup" name="title" placeholder="Заголовок">
+                    <textarea name="mess"  class="text-popup" placeholder="Описание"></textarea>
+                    <input type="text" name="num" class="inp-popup" placeholder="Оставьте свой номер телефона, контакт в телеграме или почту, для отправки запроса">
+                    <input type="url" name="url" class="inp-popup" placeholder="Ссылка">
+                    <div class="wrap-inp-files">
+                        <span class="lab-file-inp">Стикеры:</span>
+                        <div class="input-file-container">
+                            <input class="input-file uploadbtn uploadbtn2"id="my-file2" name="file" type="file" multiple >
+                            <label tabindex="0" for="my-file2" class="input-file-trigger">Загрузить изображение</label>
+                        </div>
+                    </div>
+                    <div class="wrap-files">
+                        <!-- Область предпросмотра -->
+                        <div class="uploaded-holder uploaded-holder2">
+                            <div class="dropped-files dropped-files2">
+                                <!-- Кнопки загрузить и удалить, а также количество файлов -->
+                                <div class="upload-button upload-button2">
+                                    <!-- Прогресс бар загрузки -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Список загруженных файлов -->
+                        <div class="file-name-holder file-name-holder2">
+                            <ul class="uploaded-files uploaded-files2">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wrap-sub-main-form">
+                        <input type="submit" class="sub-form" value="Добавить в каталог">
+                    </div>
+                </form>
+            </div>
+            <div class="tab tab3">
+                <form action="#" method="post" class="form-popup1 frm form-popup"  enctype="multipart/form-data">
+                    <input type="text" class="inp-popup" name="title" placeholder="Заголовок">
+                    <textarea name="mess"  class="text-popup" placeholder="Описание"></textarea>
+                    <input type="text" name="num" class="inp-popup" placeholder="Оставьте свой номер телефона, контакт в телеграме или почту, для отправки запроса">
+                    <input type="url" name="url" class="inp-popup" placeholder="Ссылка">
+                   <div class="wrapper-inp-files">
+                       <div class="wrap-inp-files">
+                           <span class="lab-file-inp lab-file-inp--mar">Стикеры:</span>
+                           <div class="input-file-container">
+                               <input class="input-file uploadbtn" id="my-file3" name="file" type="file" multiple >
+                               <label tabindex="0" for="my-file3" class="input-file-trigger">Загрузить изображение</label>
+                           </div>
+                       </div>
+                       <div class="wrap-inp-files">
+                           <span class="lab-file-inp lab-file-inp--mar">Стикеры:</span>
+                           <div class="input-file-container">
+                               <input class="input-file uploadbtn" id="my-file4" name="file" type="file" multiple >
+                               <label tabindex="0" for="my-file4" class="input-file-trigger">Загрузить изображение</label>
+                           </div>
+                       </div>
+                   </div>
                     <div class="wrap-files">
                         <!-- Область предпросмотра -->
                         <div class="uploaded-holder">
@@ -1134,13 +1213,10 @@
                     </div>
                 </form>
             </div>
-            <div class="tab tab2">2</div>
-            <div class="tab tab3">3</div>
             <div class="tab tab4">4</div>
             <div class="tab tab5">5</div>
             <div class="tab tab6">6</div>
         </div>
-    </form>
 </div>
 
 
@@ -1155,8 +1231,10 @@
 <script src="libs/jquery/jquery-1.11.1.min.js"></script>
 <script src="libs/Headhesive.js/dist/headhesive.js"></script>
 <script src="libs/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script src="libs/validate/dist/jquery.validate.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/files.js"></script>
+<script src="js/validateForm.js"></script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
