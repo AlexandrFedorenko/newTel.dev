@@ -1,0 +1,50 @@
+@import "../variables";
+
+.bradcrums_ul{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.bradcrums_item{
+  display: flex;
+  align-items: center;
+  color: #303231;
+  i{
+    font-weight: 300;
+    margin: 0 15px;
+  }
+  a{
+    font-size: 13px;
+    font-weight: 400;
+    color: #303231;
+    transition: color .2s ;
+    &:hover{
+      color: white;
+    }
+  }
+}
+.bradcrums_item--active{
+  color: #ffffff;
+  a{
+    color: #ffffff;
+  }
+}
+
+.wrap-content-about{
+  padding: 100px;
+  border-radius: 40px;
+  background: white;
+  box-shadow: 0 15px 40px -15px grey;
+}
+.about-text_title{
+  color: #279fd3;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.text{
+  font-size: 18px;
+}
+.text--mar-bot{
+  margin-bottom: 40px;
+}

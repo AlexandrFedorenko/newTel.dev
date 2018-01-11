@@ -126,6 +126,7 @@ a,button,input,textarea{
   text-decoration: none;
   transition: all .3s;
 }
+
 .container{
   max-width: 1365px;
   width: 100%;
@@ -140,6 +141,7 @@ a,button,input,textarea{
 @import "elements/blockItems";
 @import "elements/blockComents";
 @import "elements/popups";
+@import "pages/aboutAs";
 
 
 

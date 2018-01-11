@@ -6,6 +6,7 @@
   box-shadow: -15px 18px 24px rgba(12, 12, 12, 0.28);
   background-color: #f2f2f2;
   border-radius: 20px;
+  margin-top: 90px;
 }
 .menu-popup{
   display: flex;
@@ -100,6 +101,7 @@
     border: 1px solid #279fd3;
   }
 }
+
 .text-popup{
   width: 100%;
   height: 190px;
@@ -424,14 +426,18 @@
 #title-error,
 #num-error,
 #mess-error,
-#url-error{
+#url-error,
+#nameCom-error,
+#messCom-error{
   display: none!important;
 }
 .inp-popup.error,
 .text-popup.error{
   border: 1px solid red;
 }
-
+.inp.error{
+  border-bottom: 1px solid red;
+}
 
 //media
 
