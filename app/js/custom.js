@@ -1,21 +1,4 @@
 $(function() {
-    //E-mail Ajax Send
-    // Documentation & Example: https://github.com/agragregra/uniMail
-    // $("form").submit(function() { //Change
-    //     var th = $(this);
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "../mail.php", //Change
-    //         data: th.serialize()
-    //     }).done(function() {
-    //        console.log(data);
-    //         setTimeout(function() {
-    //             // Done Functions
-    //             th.trigger("reset");
-    //         }, 1000);
-    //     });
-    //     return false;
-    // });
 
 
     // no dragstart img
@@ -28,7 +11,14 @@ $(".menu-mob").click(function () {
     $(".main-menu").slideToggle();
 });
 
-
+//coments ul
+$(".fileCom").click(function () {
+    $(".comments-ul").slideToggle();
+});
+function showInpUrl() {
+    $('.inp--url-non').slideToggle();
+}
+$('.comments-ul_item--downloads').click(showInpUrl);
 
 // Options
 var options = {
@@ -97,4 +87,27 @@ button.addEventListener( "keydown", function( event ) {
 button.addEventListener( "click", function( event ) {
     fileInput.focus();
     return false;
+});
+
+
+//fancy box in comments
+
+$(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+        }
+    });
 });

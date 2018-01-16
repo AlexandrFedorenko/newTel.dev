@@ -48,3 +48,72 @@
 .text--mar-bot{
   margin-bottom: 40px;
 }
+.form-comments-middle_item--first{
+  color: #303231;
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 25px;
+}
+.views_span{
+  display: block;
+  color: #303231;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 50px;
+}
+.wrap-info-about{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+.info-about-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-comments-middle_ul--about{
+  align-items: center;
+}
+
+
+
+//media
+
+@media  (max-width: 992px){
+  .wrap-info-about{
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-about-left{
+    margin-bottom: 40px;
+  }
+}
+@media  (max-width: 768px){
+  .wrap-content-about{
+    padding: 35px;
+  }
+  .bradcrums_ul{
+    position: relative;
+    top: -30px;
+    margin-left: 10px;
+  }
+}
+@media  (max-width: 380px){
+  .wrap-content-about {
+    padding: 15px;
+  }
+  .form-comments-middle_item--first{
+    margin-right: 12px;
+    font-size: 16px;
+  }
+  .info-about-right {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .views_span{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}

@@ -19,6 +19,7 @@
     <!-- /Seo Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="libs/fancybox/css/jquery.lightbox-0.5.css">
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -880,15 +881,34 @@
         <div class="container">
             <div class="bloc-coments">
                 <div class="wrap-bloc-comrnt">
-                    <form action="#" method="post" class="form-comments" enctype="multipart/form-data">
+                    <form action="#" method="post" class="form-comments frm6" enctype="multipart/form-data">
                         <div class="form-comments_left">
                             <img src="img/add-img.png" alt="images" class="form-comments_add-img">
                         </div>
                         <div class="form-comments_middle">
                             <div class="form-comments-middle_top">
                                 <input type="text" class="inp" name="nameCom" placeholder="Ваше имя">
+                                <input type="url" class="inp inp--url-non" name="nameCom" placeholder="Вставьте ссылку ">
                                 <input type="text" class="inp" name="messCom"
                                        placeholder="Оставьте свой комментарий ...">
+
+                                <div class="wrap-files">
+                                    <!-- Область предпросмотра -->
+                                    <div class="uploaded-holder uploaded-holder6">
+                                        <div class="dropped-files dropped-files6">
+                                            <!-- Кнопки загрузить и удалить, а также количество файлов -->
+                                            <div class="upload-button upload-button6">
+                                                <!-- Прогресс бар загрузки -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Список загруженных файлов -->
+                                    <div class="file-name-holder file-name-holder6">
+                                        <ul class="uploaded-files uploaded-files6">
+
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-comments-middle_bot">
                                 <ul class="form-comments-middle_ul ul">
@@ -914,8 +934,16 @@
                             <input type="submit" class="bt bt-blue bt-blue--sub" value="Отправить комментарий">
 
                             <div class="wrap-inp-file">
-                                <label for="fileCom" class="fileCom"><i class="fa fa-paperclip" aria-hidden="true"></i></label>
-                                <input type="file" name="fileCom[]" id="fileCom" multiple class="file">
+                                <p  class="fileCom"><i class="fa fa-paperclip" aria-hidden="true"></i></p>
+                                <ul class="comments-ul ul">
+                                    <li class="comments-ul_item comments-ul_item--downloads">Загрузить  из интернета</li>
+                                    <li class="comments-ul_item">
+                                        <div class="input-file-container">
+                                            <input class="input-file uploadbtn uploadbtn6"  data-attr="6"   id="my-fileCom" name="file" type="file" multiple >
+                                            <label tabindex="0" for="my-fileCom" class="input-file-comment">Загрузить изображение</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </form>
@@ -1006,8 +1034,10 @@
                                     pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa
                                     nisl quis neque. Suspendisse in orci enim.
                                 </p>
-                                <div class="wrap-stickers">
-                                    <img src="img/stik1.png" alt="images" class="wrap-stickers_img">
+                                <div class="wrap-stickers popup-gallery">
+                                    <a href="img/stik1.png" class="gallery" rel="group"><img src="img/stik1.png" alt="images" class="wrap-stickers_img"></a>
+                                    <a href="img/photo.png" class="gallery" rel="group"><img src="img/stik1.png" alt="images" class="wrap-stickers_img"></a>
+                                    <a href="img/stik1.png" class="gallery" rel="group"><img src="img/stik1.png" alt="images" class="wrap-stickers_img"></a>
                                 </div>
                             </div>
                         </div>
@@ -1327,6 +1357,8 @@
             </div>
         </div>
 </div>
+
+
 
 
 <!--[if lt IE 9]>

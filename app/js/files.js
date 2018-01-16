@@ -927,6 +927,158 @@ $(document).ready(function() {
 
 });
 
+//7
+$(document).ready(function() {
 
+    // Максимальное количество загружаемых изображений за одни раз
+    var maxFiles7 = 8;
+
+    // Оповещение по умолчанию
+    var errMessage7 = 0;
+
+    // Кнопка выбора файлов
+    var defaultUploadBtn7 = $('.uploadbtn6');
+
+    // Массив для всех изображений
+    var dataArray7 = [];
+
+    // Область информер о загруженных изображениях - скрыта
+    // $('.uploaded-files'+count).hide();
+
+    // При нажатии на кнопку выбора файлов
+    defaultUploadBtn7.on('change', function() {
+        // Заполняем массив выбранными изображениями
+        var files7 = $(this)[0].files;
+        // Проверяем на максимальное количество файлов
+        if (files7.length <= maxFiles7) {
+            // Передаем массив с файлами в функцию загрузки на предпросмотр
+            loadInView(files7);
+            // Очищаем инпут файл путем сброса формы
+            $('.frm6').each(function(){
+                $('.uploadbtn6').val('');
+            });
+        } else {
+            // alert('Вы не можете загружать больше '+maxFiles6+' изображений!');
+            $(this).prop( "disabled", true );
+            files7.length = 0;
+        }
+    });
+
+    // Функция загрузки изображений на предросмотр
+    function loadInView(files7) {
+        // Показываем обасть предпросмотра
+        $('.uploaded-holder6').show();
+
+        // Для каждого файла
+        $.each(files7, function(index, file) {
+
+            // Несколько оповещений при попытке загрузить не изображение
+            if (!files7[index].type.match('image.*')) {
+
+                if(errMessage7 == 0) {
+                    $('.drop-files p').html('Можно загружать только изображения!');
+                    ++errMessage6
+                }
+                else if(errMessage6 == 1) {
+                    $('.drop-files p').html('Можно загружать только изображения!');
+                    ++errMessage7
+                }
+                else if(errMessage7 == 2) {
+                    $('.drop-files p').html("Можно загружать только изображения!");
+                    ++errMessage7
+                }
+                else if(errMessage7 == 3) {
+                    $('.drop-files p').html("Можно загружать только изображения!");
+                    errMessage7 = 0;
+                }
+                return false;
+            }
+
+            // Проверяем количество загружаемых элементов
+            if((dataArray7.length+files7.length) <= maxFiles7) {
+                // показываем область с кнопками
+                $('.upload-button6').css({'display' : 'block'});
+            }
+            else { alert('Вы не можете загружать больше '+maxFiles7+' изображений!'); return; }
+
+            // Создаем новый экземпляра FileReader
+            var fileReader7 = new FileReader();
+            // Инициируем функцию FileReader
+            fileReader7.onload = (function(file) {
+
+                return function(e) {
+                    // Помещаем URI изображения в массив
+                    dataArray7.push({name : file.name, value : this.result});
+                    addImage((dataArray7.length-1));
+                };
+
+            })(files7[index]);
+            // Производим чтение картинки по URI
+            fileReader7.readAsDataURL(file);
+        });
+        return false;
+    }
+
+    // Процедура добавления эскизов на страницу
+    function addImage(ind) {
+        // Если индекс отрицательный значит выводим весь массив изображений
+        if (ind < 0 ) {
+            start = 0; end = dataArray7.length;
+        } else {
+            // иначе только определенное изображение
+            start = ind; end = ind+1; }
+
+        // Цикл для каждого элемента массива
+        for (i = start; i < end; i++) {
+            // размещаем загруженные изображения
+            if($('.dropped-files6 > .image').length <= maxFiles7) {
+                $('.dropped-files6').append('' +
+                    '<div id="img-'+i+'" class="image" style="background: url('+dataArray7[i].value+'); background-size: cover;">' +
+                    '<a href="#" id="drop-'+i+'" class="drop-button">' +
+                    '<div class="open-tooltip"><div class="tooltip-files">' +
+                    '<p class="tooltip-files_title">Вы действительно хотите удалить изображение?</p>' +
+                    '<div class="wrap-btn-files-tooltip">' +
+                    '<button class=" bt-tool yes-tool">Да</button>' +
+                    '<button class=" bt-tool no-tool">Нет</button>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    ' </a>' +
+                    '</div>');
+            }
+        }
+        return false;
+    }
+    // // Удаление только выбранного изображения
+    $(".dropped-files6").on("click","a[id^='drop']", function(e) {
+        e.preventDefault();
+        $(this).find($('.open-tooltip')).slideToggle();
+        // получаем название id
+        var elid7 = $(this).attr('id');
+        // создаем массив для разделенных строк
+        var temp7 = new Array();
+        // делим строку id на 2 части
+        // Удаляем старые эскизы
+        if( $('.yes-tool').hasClass('ad')){
+            temp7 = elid7.split('-');
+            // получаем значение после тире тоесть индекс изображения в массиве
+            dataArray7.splice(temp7[1],1);
+            $('.dropped-files6 > .image' ).remove();
+            // Обновляем эскизи в соответсвии с обновленным массивом
+            addImage(-1);
+            $(this).removeClass('ad');
+        }
+        $(this).find('.yes-tool').click(toolTip);
+        function toolTip() {
+            $(this).addClass('ad');
+
+        }
+        $(this).find('.no-tool').click(toolTipNo);
+        function toolTipNo() {
+            $(this).find('.open-tooltip').slideToggle();
+        }
+    });
+
+});
 
 

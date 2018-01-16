@@ -202,3 +202,35 @@
     margin-right: 0;
   }
 }
+
+//media
+
+@media  (max-width: 992px){
+  .form-comments_right {
+    padding-right: 0;
+  }
+  .form-comments_left {
+    padding-left: 0;
+  }
+}
+@media  (max-width: 768px){
+  .form-comments_middle{
+    flex: auto;
+    margin-left: 0;
+    width: 100%;
+  }
+  .form-comments-middle_top{
+    .dropped-files,
+    .uploaded-files{
+      width: 100%;
+      padding: 0;
+    }
+    .inp{
+      max-width: 90%;
+      margin: 0 auto 15px;
+    }
+  }
+  .form-comments-middle_ul{
+    justify-content: center;
+  }
+}
