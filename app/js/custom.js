@@ -111,3 +111,10 @@ $(document).ready(function() {
         }
     });
 });
+
+
+//filter class active
+function setClassActiv() {
+    $(this).toggleClass('filter-btn--active');
+}
+$('.filter-btn').click(setClassActiv);
