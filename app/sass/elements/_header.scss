@@ -47,7 +47,13 @@
     }
   }
 }
-
+.main-menu_item--active{
+  a{
+    &::after{
+      width: 100%;
+    }
+  }
+}
 //section 1
 .row-flex{
   display: flex;

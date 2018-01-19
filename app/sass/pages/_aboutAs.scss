@@ -8,7 +8,7 @@
 .bradcrums_item{
   display: flex;
   align-items: center;
-  color: #303231;
+  color: white;
   i{
     font-weight: 300;
     margin: 0 15px;
@@ -16,17 +16,17 @@
   a{
     font-size: 13px;
     font-weight: 400;
-    color: #303231;
+    color: white;
     transition: color .2s ;
     &:hover{
-      color: white;
+      color: #303231;
     }
   }
 }
 .bradcrums_item--active{
-  color: #ffffff;
+  color:#303231;
   a{
-    color: #ffffff;
+    color:#303231;
   }
 }
 
@@ -97,6 +97,9 @@
     position: relative;
     top: -30px;
     margin-left: 10px;
+  }
+  .bradcrums_ul{
+    flex-wrap: wrap;
   }
 }
 @media  (max-width: 380px){
