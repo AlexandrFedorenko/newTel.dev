@@ -1,0 +1,193 @@
+@import "../variables";
+
+.blogs-item_addres {
+  a {
+    color: $black;
+  }
+}
+
+.search {
+  position: relative;
+}
+
+.search_inp {
+  background: transparent;
+  padding-left: 40px;
+  padding-right: 75px;
+  width: 780px;
+  height: 66px;
+  border-radius: 40px;
+  border: 1px solid #888888;
+  &:active,
+  &:focus {
+    border: 1px solid $liBlue;
+    background: white;
+  }
+}
+
+.bt-blue--faq {
+  margin-top: 200px;
+}
+
+.search_sub {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  i {
+    color: #279fd3;
+    font-size: 30px;
+  }
+}
+
+.faq {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 80px;
+  }
+}
+
+.faq_item {
+  color: #303231;
+  font-weight: 700;
+  line-height: 24px;
+  a {
+    color: #47abd9;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.faq_title {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.inform-ul-item {
+  position: relative;
+  width: 100%;
+  background: #f2f2f2;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 0 11px 25px -10px grey;
+  padding: 30px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 70px;
+    top: -39px;
+    border: 20px solid transparent;
+    border-bottom: 20px solid #f2f2f2;
+  }
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.inform-ul-item-title {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.inform-ul-item-title_left {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.inform-ul-item-title_right {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 300;
+  span {
+    padding-right: 15px;
+  }
+}
+
+.wrap-images-games {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.images-games-left_title {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.images-games-left_img {
+  img, iframe, video {
+    max-width: 550px;
+    width: 100%;
+  }
+}
+
+.images-games-left {
+  margin-right: 10px;
+}
+
+.wrap-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.gallery_item-masck {
+  display: block;
+  max-width: 200px;
+  width: 25%;
+  margin: 20px 20px 0 20px;
+  img {
+    width: 100%;
+  }
+}
+
+//media
+@media(max-width: 1200px) {
+  .block-phone--faq {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bt-blue--faq {
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 840px) {
+  .search_inp {
+    width: 100%;
+    background: white;
+  }
+  .wrap-images-games {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .images-games-left {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media(max-width: 480px) {
+  .inform-ul-item p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

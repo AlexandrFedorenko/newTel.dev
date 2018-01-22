@@ -1,0 +1,126 @@
+@import "../variables";
+
+.bg-install {
+  position: relative;
+  width: 100%;
+  background: url("../img/bg-install.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-install--flex {
+  justify-content: center;
+}
+
+.bg-install-img {
+  position: absolute;
+  top: -90px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.instal-top_img {
+  display: block;
+  max-width: 100%;
+  margin: 100px auto 30px;
+}
+
+.instal-top_title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.instal-stickers {
+  display: block;
+  text-align: center;
+  padding: 16px 35px;
+  box-shadow: 0 14px 21px rgba(12, 13, 13, 0.17);
+  background-color: #ffffff;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 80px;
+  border-radius: 40px;
+  transition: .2s;
+  &:hover {
+    background-color: $darkBlue;
+    color: white;
+  }
+}
+
+.get-telegram {
+  display: block;
+  text-align: center;
+  padding: 16px 35px;
+  box-shadow: 0 14px 21px rgba(12, 13, 13, 0.17);
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 80px;
+  border-radius: 40px;
+  transition: .2s;
+  &:hover {
+    background-color: white;
+    color: $black;
+  }
+}
+
+.instal-bot {
+  margin-bottom: 30px;
+}
+
+.instal-top_title-h1 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 40px;
+  margin-top: 30%;
+}
+
+.instal-bot--reqvest {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+//media
+@media (max-width: 992px) {
+  .bg-install-img {
+    display: none;
+  }
+  .bg-install {
+    background: $liBlue;
+    min-height: 100%;
+  }
+  .instal-top_img {
+    margin: 35px auto 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-install {
+    height: 100%;
+  }
+  .instal-bot {
+    margin-bottom: 0;
+  }
+  .instal-top_img {
+    margin: 15px auto 15px;
+    max-width: 130px;
+  }
+  .reqve{
+    background: $liBlue;
+  }
+  .instal-bot--reqvest {
+   display: none;
+  }
+  .instal-top_title-h1 {
+    margin-top: 60%;
+  }
+}
